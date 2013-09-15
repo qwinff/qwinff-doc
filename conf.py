@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'QWinFF'
-copyright = u'2013, Timothy Lin'
+copyright = u'2013, Timothy Lin <lzh9102@gmail.com>'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -187,7 +187,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'QWinFF.tex', u'QWinFF Documentation',
-   u'Timothy Lin', 'manual'),
+   u'Timothy Lin <lzh9102@gmail.com>', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -217,7 +217,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'qwinff', u'QWinFF Documentation',
-     [u'Timothy Lin'], 1)
+     [u'Timothy Lin <lzh9102@gmail.com>'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -231,7 +231,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'QWinFF', u'QWinFF Documentation',
-   u'Timothy Lin', 'QWinFF', 'One line description of project.',
+   u'Timothy Lin <lzh9102@gmail.com>', 'QWinFF', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -252,9 +252,9 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'QWinFF'
-epub_author = u'Timothy Lin'
-epub_publisher = u'Timothy Lin'
-epub_copyright = u'2013, Timothy Lin'
+epub_author = u'Timothy Lin <lzh9102@gmail.com>'
+epub_publisher = u'Timothy Lin <lzh9102@gmail.com>'
+epub_copyright = u'2013, Timothy Lin <lzh9102@gmail.com>'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
