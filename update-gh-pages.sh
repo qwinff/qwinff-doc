@@ -18,6 +18,10 @@ python generate-index.py $ITEMS
 
 # commit pages to gh-pages branch
 git checkout gh-pages
+if [ $? -ne 0 ]; then
+	echo "failed to switch to gh-pages"
+	exit 1
+fi
 git rm -rf . >& /dev/null
 for item in $ITEMS; do
 	cp -rp _build/$item . && git add $item
