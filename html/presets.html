@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. Presets &mdash; QWinFF 0.1.9 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.9',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="QWinFF 0.1.9 documentation" href="index.html" />
+    <link rel="next" title="5. Credit and License" href="credits.html" />
+    <link rel="prev" title="3. Files" href="files.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="credits.html" title="5. Credit and License"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="files.html" title="3. Files"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">QWinFF 0.1.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="presets">
+<span id="id1"></span><h1>4. Presets<a class="headerlink" href="#presets" title="Permalink to this headline">¶</a></h1>
+<p>Presets of QWinFF are written in <a class="reference internal" href="files.html#data-files"><em>presets.xml</em></a> in the program
+installation directory. The format and structure of <em>presets.xml</em> is compatible
+with the preset file of WinFF <a class="footnote-reference" href="#winff" id="id2">[1]</a>. This means you can copy any WinFF
+preset to <em>presets.xml</em> and use it in QWinFF. In fact, most QWinFF presets are
+taken from WinFF with little or no modification.</p>
+<p>A preset contains the following fields:</p>
+<dl class="docutils">
+<dt>label</dt>
+<dd>a descriptive name of the preset. example: <tt class="docutils literal"><span class="pre">WebM</span> <span class="pre">Generic</span></tt></dd>
+<dt>params</dt>
+<dd>parameters to be passed to ffmpeg.
+example: <tt class="docutils literal"><span class="pre">-vcodec</span> <span class="pre">libvpx</span> <span class="pre">-acodec</span> <span class="pre">libvorbis</span> <span class="pre">-aq</span> <span class="pre">90</span> <span class="pre">-ac</span> <span class="pre">2</span></tt></dd>
+<dt>extension</dt>
+<dd>extension of the output file. example: <tt class="docutils literal"><span class="pre">webm</span></tt></dd>
+<dt>category</dt>
+<dd>category of the preset. This field is reserved but currently unused by
+QWinFF. example: <tt class="docutils literal"><span class="pre">Websites</span></tt></dd>
+</dl>
+<p>The preset described above is then written in the preset file like this:</p>
+<div class="code xml highlight-python"><pre>&lt;WebMGeneric&gt;
+  &lt;label&gt;WebM Generic&lt;/label&gt;
+  &lt;params&gt;-vcodec libvpx -acodec libvorbis -aq 90 -ac 2&lt;/params&gt;
+  &lt;extension&gt;webm&lt;/extension&gt;
+  &lt;category&gt;Websites&lt;/category&gt;
+&lt;/WebMGeneric&gt;</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The preset tag name (<tt class="docutils literal"><span class="pre">WebMGeneric</span></tt>) is chosen arbitrarily. Also,
+there is no need to make preset tag names unique. For example, it&#8217;s OK to
+name all of them <tt class="docutils literal"><span class="pre">preset</span></tt>.</p>
+</div>
+<p>It is better to include codec information in <tt class="docutils literal"><span class="pre">params</span></tt> (e.g. <tt class="docutils literal"><span class="pre">-vcodec</span>
+<span class="pre">libvpx</span></tt>), because QWinFF checks whether the installed ffmpeg supports the
+codec. If any one of the <tt class="docutils literal"><span class="pre">-acodec</span></tt> or <tt class="docutils literal"><span class="pre">-vcodec</span></tt> isn&#8217;t supported, the preset
+will be hidden.</p>
+<table class="docutils footnote" frame="void" id="winff" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><a class="reference external" href="http://winff.org">http://winff.org</a></td></tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">2. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">3. Files</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. Presets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">5. Credit and License</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="credits.html" title="5. Credit and License"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="files.html" title="3. Files"
+             >previous</a> |</li>
+        <li><a href="index.html">QWinFF 0.1.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Timothy Lin &lt;lzh9102@gmail.com&gt;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>
