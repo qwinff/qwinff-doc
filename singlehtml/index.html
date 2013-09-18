@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>QWinFF 0.1.9 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.9',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="None" href="index.html#document-index" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html#document-index">QWinFF 0.1.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="qwinff-documentation">
+<h1>QWinFF Documentation<a class="headerlink" href="#qwinff-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-intro"></span><div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>QWinFF is a GUI for FFmpeg <a class="footnote-reference" href="#ffmpeg" id="id1">[1]</a>, a command line media converter. FFmpeg
+can read audio and video files in various formats and convert them into other
+formats.  For example, you can convert video downloaded from the Internet into
+audio files for your mobile phone.</p>
+<p>QWinFF comes with a set of predefined presets to help you quickly convert media
+files without having to know the details. These presets defines what arguments
+should be passed to <em>ffmpeg</em> for each output format. In case you want to adjust
+the details (bitrate, audio volume, etc.), QWinFF lets you edit conversion
+parameters for each individual task.</p>
+<p>Currently QWinFF runs on GNU/Linux and Microsoft Windows <a class="footnote-reference" href="#windows" id="id2">[2]</a>.</p>
+<table class="docutils footnote" frame="void" id="ffmpeg" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://www.ffmpeg.org/">http://www.ffmpeg.org/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="windows" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Windows is a registered trademark of Microsoft Corporation in the
+United States and other countries.</td></tr>
+</tbody>
+</table>
+</div>
+<span id="document-quickstart"></span><div class="section" id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
+<p>When you open QWinFF, you will see is the <em>Main Window</em>. At the top of the Main
+Window is the <em>Toolbar</em>, which contains most common operations you will need.
+Below the Toolbar is the <em>Task List</em>. The Task List is used to display all
+conversion tasks. At the bottom-right corner, there is a <em>Start</em> button. At the
+bottom of the window is the <em>Status Bar</em>.</p>
+<p>The first thing to do is add some files to convert. You can do it by either
+clicking on the <em>Add</em> button on the Toolbar or drag-and-drop files into the
+Task List. After adding all files you want to convert, an <em>Add Task</em> dialog
+will appear. You can select the output container format (<em>Convert To</em>) and
+the output configuration (<em>Preset</em>). Then, select the desired output folder and
+press <em>Finish</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can select multiple files in the <em>Open File</em> dialog and add them
+all at once.</p>
+</div>
+<p>When you have added some tasks, click the Start button and the conversion will
+start. Conversion progress of each task will be shown in the progress bar entry
+in the Task List.</p>
+</div>
+<span id="document-files"></span><div class="section" id="files">
+<span id="id1"></span><h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation-directory">
+<h3>Installation Directory<a class="headerlink" href="#installation-directory" title="Permalink to this headline">¶</a></h3>
+<p>Installed files are placed differently on different platforms. On GNU/Linux,
+the program executable is installed in <tt class="docutils literal"><span class="pre">&lt;prefix&gt;/bin</span></tt> and data files are
+installed in <tt class="docutils literal"><span class="pre">&lt;prefix&gt;/share/qwinff</span></tt>. The <tt class="docutils literal"><span class="pre">&lt;prefix&gt;</span></tt> part depends on the
+packager, and the most common prefix is <tt class="docutils literal"><span class="pre">/usr</span></tt>. On Microsoft Windows, all
+files, including the executable file and data files, are placed in the
+installation directory you choose, and the default is <tt class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files</span>
+<span class="pre">(x86)\QWinFF</span></tt> or <tt class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\QWinFF</span></tt>.</p>
+</div>
+<div class="section" id="data-files">
+<span id="id2"></span><h3>Data Files<a class="headerlink" href="#data-files" title="Permalink to this headline">¶</a></h3>
+<p>The contents of the data directory are described as follows:</p>
+<dl class="docutils">
+<dt>presets.xml</dt>
+<dd>This file contains ffmpeg presets. See <a class="reference internal" href="index.html#presets"><em>Presets</em></a> for details about the
+preset file format.</dd>
+<dt>constants.xml</dt>
+<dd>This file contains some pre-defined values used by the program.  It is read
+once on program startup. The function of each entry is documented using xml
+comments in the file.  QWinFF won&#8217;t start if errors or incorrect values are
+detected in this files, so modify this file with care.</dd>
+<dt>translations/</dt>
+<dd>This directory contains translation files (<tt class="docutils literal"><span class="pre">*.qm</span></tt>) for the program.
+Translation files should be named as
+<tt class="docutils literal"><span class="pre">qwinff_&lt;language-code&gt;_&lt;country-code&gt;_.qm</span></tt>. For example, translation file
+for Chinese (Taiwan) should be named <tt class="docutils literal"><span class="pre">qwinff_zh_TW.qm</span></tt>.</dd>
+<dt><cite>*.dll</cite></dt>
+<dd>(Windows only) Dynamic libraries the program depends on.</dd>
+<dt>tools/</dt>
+<dd>(Windows only) This directory contains external tools used by the program,
+including <tt class="docutils literal"><span class="pre">ffmpeg.exe</span></tt>, <tt class="docutils literal"><span class="pre">ffprobe.exe</span></tt>, <tt class="docutils literal"><span class="pre">sox.exe</span></tt> and other supporting
+tools/libraries.</dd>
+</dl>
+</div>
+<div class="section" id="settings-file">
+<h3>Settings File<a class="headerlink" href="#settings-file" title="Permalink to this headline">¶</a></h3>
+<p>Program settings are saved separately for each user. On GNU/Linux, the settings
+file is <tt class="docutils literal"><span class="pre">~/.qwinff/qwinff.ini</span></tt>. The installed version on Windows saves the
+settings in <tt class="docutils literal"><span class="pre">.qwinff\qwinff.ini</span></tt> in the user&#8217;s home directory, while the
+portable version saves the settings in <tt class="docutils literal"><span class="pre">qwinff.ini</span></tt> in the program directory.</p>
+</div>
+</div>
+<span id="document-presets"></span><div class="section" id="presets">
+<span id="id1"></span><h2>Presets<a class="headerlink" href="#presets" title="Permalink to this headline">¶</a></h2>
+<p>Presets of QWinFF are written in <a class="reference internal" href="index.html#data-files"><em>presets.xml</em></a> in the program
+installation directory. The format and structure of <em>presets.xml</em> is compatible
+with the preset file of WinFF <a class="footnote-reference" href="#winff" id="id2">[1]</a>. This means you can copy any WinFF
+preset to <em>presets.xml</em> and use it in QWinFF. In fact, most QWinFF presets are
+taken from WinFF with little or no modification.</p>
+<p>A preset contains the following fields:</p>
+<dl class="docutils">
+<dt>label</dt>
+<dd>a descriptive name of the preset. example: <tt class="docutils literal"><span class="pre">WebM</span> <span class="pre">Generic</span></tt></dd>
+<dt>params</dt>
+<dd>parameters to be passed to ffmpeg.
+example: <tt class="docutils literal"><span class="pre">-vcodec</span> <span class="pre">libvpx</span> <span class="pre">-acodec</span> <span class="pre">libvorbis</span> <span class="pre">-aq</span> <span class="pre">90</span> <span class="pre">-ac</span> <span class="pre">2</span></tt></dd>
+<dt>extension</dt>
+<dd>extension of the output file. example: <tt class="docutils literal"><span class="pre">webm</span></tt></dd>
+<dt>category</dt>
+<dd>category of the preset. This field is reserved but currently unused by
+QWinFF. example: <tt class="docutils literal"><span class="pre">Websites</span></tt></dd>
+</dl>
+<p>The preset described above is then written in the preset file like this:</p>
+<div class="code xml highlight-python"><pre>&lt;WebMGeneric&gt;
+  &lt;label&gt;WebM Generic&lt;/label&gt;
+  &lt;params&gt;-vcodec libvpx -acodec libvorbis -aq 90 -ac 2&lt;/params&gt;
+  &lt;extension&gt;webm&lt;/extension&gt;
+  &lt;category&gt;Websites&lt;/category&gt;
+&lt;/WebMGeneric&gt;</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The preset tag name (<tt class="docutils literal"><span class="pre">WebMGeneric</span></tt>) is chosen arbitrarily. Also,
+there is no need to make preset tag names unique. For example, it&#8217;s OK to
+name all of them <tt class="docutils literal"><span class="pre">preset</span></tt>.</p>
+</div>
+<p>It is better to include codec information in <tt class="docutils literal"><span class="pre">params</span></tt> (e.g. <tt class="docutils literal"><span class="pre">-vcodec</span>
+<span class="pre">libvpx</span></tt>), because QWinFF checks whether the installed ffmpeg supports the
+codec. If any one of the <tt class="docutils literal"><span class="pre">-acodec</span></tt> or <tt class="docutils literal"><span class="pre">-vcodec</span></tt> isn&#8217;t supported, the preset
+will be hidden.</p>
+<table class="docutils footnote" frame="void" id="winff" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><a class="reference external" href="http://winff.org">http://winff.org</a></td></tr>
+</tbody>
+</table>
+</div>
+<span id="document-credits"></span><div class="section" id="credit-and-license">
+<span id="credits"></span><h2>Credit and License<a class="headerlink" href="#credit-and-license" title="Permalink to this headline">¶</a></h2>
+<p>Copyright (C) 2013 by Timothy Lin, all rights reserved.</p>
+<p>Related Artwork and the QWinFF Logo are designed by kuanyui.</p>
+<p>QWinFF is heavily influenced by WinFF <a class="footnote-reference" href="#winff" id="id1">[1]</a>, another ffmpeg GUI frontend.
+Most of the presets used in QWinFF are directly copied from WinFF presets. The
+name <em>QWinFF</em> also comes from the notion that it is a program similar to WinFF
+and written in Qt.</p>
+<p>QWinFF is free software; you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software
+Foundation, either version 2 or 3 of the License.</p>
+<p>QWinFF is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU General Public License for more details.</p>
+<p>This document is licenced under the GNU Free Documentation License, either
+version 1.3 or any later version published by the Free Software Foundation.</p>
+<p>FFmpeg is a separate project, not connected to QWinFF. FFmpeg is licensed under
+the LGPL version 2.1, and some optional parts of it are covered by the GPL.
+<em>FFmpeg</em> is a trademark of Fabrice Bellard, originator of the FFmpeg project.</p>
+<table class="docutils footnote" frame="void" id="winff" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://winff.org">http://winff.org</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html#document-index">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-intro">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-quickstart">2. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-files">3. Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-presets">4. Presets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-credits">5. Credit and License</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html#document-index">QWinFF 0.1.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Timothy Lin &lt;lzh9102@gmail.com&gt;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>
