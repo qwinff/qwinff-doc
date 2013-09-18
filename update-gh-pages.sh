@@ -2,6 +2,7 @@
 
 ITEMS="""
 html
+singlehtml
 """
 
 UPDATED_ITEMS="\t"
