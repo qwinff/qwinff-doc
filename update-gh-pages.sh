@@ -25,7 +25,7 @@ if [ $? -ne 0 ]; then
 fi
 git rm -rf . >& /dev/null
 for item in $ITEMS; do
-	cp -rp _build/$item . && git add $item
+	cp -rp _build/$item . && git add $item >& /dev/null
 	if [ $? -eq 0 ]; then
 		echo "successfully updated $item"
 		UPDATED_ITEMS="${UPDATED_ITEMS}${item}\n\t"
