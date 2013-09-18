@@ -13,6 +13,7 @@ for item in $ITEMS; do
 	make $item > /dev/null
 	[ $? -ne 0 ] && exit 1
 done
+python generate-index.py $ITEMS
 
 # commit pages to gh-pages branch
 git checkout gh-pages
@@ -31,6 +32,7 @@ DATE=`date '+%Y-%m-%d %H:%M:%S'`
 LOG="Update on $DATE.\n\nupdated items:\n$UPDATED_ITEMS"
 LOG=`echo -e "$LOG"`
 
+git add index.html
 git commit -m "$LOG"
 
 # push to remote
