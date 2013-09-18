@@ -50,7 +50,7 @@ if [ "$reply" != "y" ]; then
 	echo "not pushing to remote"
 else
 	echo "pushing to remote"
-	git push
+	git push --force
 fi
 
 git checkout master
