@@ -14,7 +14,8 @@ for item in $ITEMS; do
 	make $item > /dev/null
 	[ $? -ne 0 ] && exit 1
 done
-python generate-index.py $ITEMS
+python generate-index.py $ITEMS # generate index.html
+mv index.html index-new.html # checkout gh-pages overwrites index.html
 
 # commit pages to gh-pages branch
 git checkout gh-pages
@@ -37,7 +38,10 @@ DATE=`date '+%Y-%m-%d %H:%M:%S'`
 LOG="Update on $DATE.\n\nupdated items:\n$UPDATED_ITEMS"
 LOG=`echo -e "$LOG"`
 
+mv index-new.html index.html
 git add index.html
+touch .nojekyll
+git add .nojekyll
 git commit -m "$LOG"
 
 # push to remote
