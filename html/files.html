@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. Files &mdash; QWinFF 0.1.9 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.9',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="QWinFF 0.1.9 documentation" href="index.html" />
+    <link rel="next" title="4. Presets" href="presets.html" />
+    <link rel="prev" title="2. Quick Start" href="quickstart.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="presets.html" title="4. Presets"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="2. Quick Start"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">QWinFF 0.1.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="files">
+<span id="id1"></span><h1>3. Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation-directory">
+<h2>3.1. Installation Directory<a class="headerlink" href="#installation-directory" title="Permalink to this headline">¶</a></h2>
+<p>Installed files are placed differently on different platforms. On GNU/Linux,
+the program executable is installed in <tt class="docutils literal"><span class="pre">&lt;prefix&gt;/bin</span></tt> and data files are
+installed in <tt class="docutils literal"><span class="pre">&lt;prefix&gt;/share/qwinff</span></tt>. The <tt class="docutils literal"><span class="pre">&lt;prefix&gt;</span></tt> part depends on the
+packager, and the most common prefix is <tt class="docutils literal"><span class="pre">/usr</span></tt>. On Microsoft Windows, all
+files, including the executable file and data files, are placed in the
+installation directory you choose, and the default is <tt class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files</span>
+<span class="pre">(x86)\QWinFF</span></tt> or <tt class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\QWinFF</span></tt>.</p>
+</div>
+<div class="section" id="data-files">
+<span id="id2"></span><h2>3.2. Data Files<a class="headerlink" href="#data-files" title="Permalink to this headline">¶</a></h2>
+<p>The contents of the data directory are described as follows:</p>
+<dl class="docutils">
+<dt>presets.xml</dt>
+<dd>This file contains ffmpeg presets. See <a class="reference internal" href="presets.html#presets"><em>Presets</em></a> for details about the
+preset file format.</dd>
+<dt>constants.xml</dt>
+<dd>This file contains some pre-defined values used by the program.  It is read
+once on program startup. The function of each entry is documented using xml
+comments in the file.  QWinFF won&#8217;t start if errors or incorrect values are
+detected in this files, so modify this file with care.</dd>
+<dt>translations/</dt>
+<dd>This directory contains translation files (<tt class="docutils literal"><span class="pre">*.qm</span></tt>) for the program.
+Translation files should be named as
+<tt class="docutils literal"><span class="pre">qwinff_&lt;language-code&gt;_&lt;country-code&gt;_.qm</span></tt>. For example, translation file
+for Chinese (Taiwan) should be named <tt class="docutils literal"><span class="pre">qwinff_zh_TW.qm</span></tt>.</dd>
+<dt><cite>*.dll</cite></dt>
+<dd>(Windows only) Dynamic libraries the program depends on.</dd>
+<dt>tools/</dt>
+<dd>(Windows only) This directory contains external tools used by the program,
+including <tt class="docutils literal"><span class="pre">ffmpeg.exe</span></tt>, <tt class="docutils literal"><span class="pre">ffprobe.exe</span></tt>, <tt class="docutils literal"><span class="pre">sox.exe</span></tt> and other supporting
+tools/libraries.</dd>
+</dl>
+</div>
+<div class="section" id="settings-file">
+<h2>3.3. Settings File<a class="headerlink" href="#settings-file" title="Permalink to this headline">¶</a></h2>
+<p>Program settings are saved separately for each user. On GNU/Linux, the settings
+file is <tt class="docutils literal"><span class="pre">~/.qwinff/qwinff.ini</span></tt>. The installed version on Windows saves the
+settings in <tt class="docutils literal"><span class="pre">.qwinff\qwinff.ini</span></tt> in the user&#8217;s home directory, while the
+portable version saves the settings in <tt class="docutils literal"><span class="pre">qwinff.ini</span></tt> in the program directory.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">2. Quick Start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-directory">3.1. Installation Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-files">3.2. Data Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#settings-file">3.3. Settings File</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="presets.html">4. Presets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">5. Credit and License</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="presets.html" title="4. Presets"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="2. Quick Start"
+             >previous</a> |</li>
+        <li><a href="index.html">QWinFF 0.1.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Timothy Lin &lt;lzh9102@gmail.com&gt;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>
