@@ -1,4 +1,5 @@
 #!/bin/bash
+# publish documentation to github pages (gh-pages branch)
 
 ITEMS="""
 html
