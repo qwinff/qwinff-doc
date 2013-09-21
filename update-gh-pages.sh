@@ -3,6 +3,7 @@
 ITEMS="""
 html
 singlehtml
+latexpdf
 """
 
 publish_html() {
@@ -11,6 +12,12 @@ publish_html() {
 
 publish_singlehtml() {
 	cp -r _build/singlehtml singlehtml
+}
+
+publish_latexpdf() {
+	mkdir -p latexpdf
+	cp -r _build/latex/QWinFF.pdf latexpdf/qwinff.pdf
+	echo "<a href=\"qwinff.pdf\">qwinff pdf document</a>" > latexpdf/index.html
 }
 
 UPDATED_ITEMS="\t"
