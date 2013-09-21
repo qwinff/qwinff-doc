@@ -17,7 +17,12 @@ publish_singlehtml() {
 publish_latexpdf() {
 	mkdir -p latexpdf
 	cp -r _build/latex/QWinFF.pdf latexpdf/qwinff.pdf
-	echo "<a href=\"qwinff.pdf\">qwinff pdf document</a>" > latexpdf/index.html
+	echo """<html>
+<head><meta http-equiv='refresh' content='0; url=qwinff.pdf'/></head>
+<body>
+<a href='qwinff.pdf'>qwinff pdf document</a>
+</body>
+</html>""" > latexpdf/index.html
 }
 
 generate_index() {
