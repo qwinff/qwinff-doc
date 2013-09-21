@@ -39,11 +39,12 @@ generate_redirect_page() {
 }
 
 generate_index() {
-	echo "<ul>" > index.html
+	echo "<html><head><title>QWinFF Documentation</title></head><body>" > index.html
+	echo "<ul>" >> index.html
 	for item in $ITEMS; do
 		echo "<li><a href=\"$item/index.html\">$item</a></li>" >> index.html
 	done
-	echo "</ul>" >> index.html
+	echo "</ul></body></html>" >> index.html
 }
 
 init_gh_pages_branch() {
