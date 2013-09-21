@@ -52,7 +52,7 @@ init_gh_pages_branch() {
 UPDATED_ITEMS="\t"
 
 # build pages
-git checkout master
+git checkout master || exit 1
 for item in $ITEMS; do
 	echo building $item
 	make $item > /dev/null
