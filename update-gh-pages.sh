@@ -5,6 +5,14 @@ html
 singlehtml
 """
 
+publish_html() {
+	cp -r _build/html html
+}
+
+publish_singlehtml() {
+	cp -r _build/singlehtml singlehtml
+}
+
 UPDATED_ITEMS="\t"
 
 # build pages
@@ -25,7 +33,7 @@ if [ $? -ne 0 ]; then
 fi
 git rm -rf . >& /dev/null
 for item in $ITEMS; do
-	cp -rp _build/$item . && git add $item >& /dev/null
+	publish_$item && git add $item >& /dev/null
 	if [ $? -eq 0 ]; then
 		echo "successfully updated $item"
 		UPDATED_ITEMS="${UPDATED_ITEMS}${item}\n\t"
