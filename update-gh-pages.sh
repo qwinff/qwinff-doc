@@ -57,6 +57,9 @@ for item in $ITEMS; do
 		UPDATED_ITEMS="${UPDATED_ITEMS}${item}\n\t"
 	else
 		echo "ERROR: failed to update $item"
+		git checkout HEAD .
+		git checkout master
+		exit 1
 	fi
 done
 
