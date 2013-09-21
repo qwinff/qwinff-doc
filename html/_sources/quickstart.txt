@@ -20,5 +20,7 @@ press *Finish*.
 
 When you have added some tasks, click the Start button and the conversion will
 start. Conversion progress of each task will be shown in the progress bar entry
-in the Task List. After a task is finished, double-click on it to open the
+in the Task List. If a conversion fails, you can view the error message by moving
+the mouse pointer over the progress bar or right-click on the task and select
+*Show Error Message*. After a task is finished, double-click on it to open the
 output folder.
