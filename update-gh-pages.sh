@@ -17,12 +17,17 @@ publish_singlehtml() {
 publish_latexpdf() {
 	mkdir -p latexpdf
 	cp -r _build/latex/QWinFF.pdf latexpdf/qwinff.pdf
+	generate_redirect_page qwinff.pdf > latexpdf/index.html
+}
+
+# usage: generate_redirect_page <target>
+generate_redirect_page() {
 	echo """<html>
-<head><meta http-equiv='refresh' content='0; url=qwinff.pdf'/></head>
+<head><meta http-equiv='refresh' content='0; url=$1'/></head>
 <body>
-<a href='qwinff.pdf'>qwinff pdf document</a>
+<a href='$1'>$1</a>
 </body>
-</html>""" > latexpdf/index.html
+</html>"""
 }
 
 generate_index() {
