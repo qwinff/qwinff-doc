@@ -20,4 +20,5 @@ press *Finish*.
 
 When you have added some tasks, click the Start button and the conversion will
 start. Conversion progress of each task will be shown in the progress bar entry
-in the Task List.
+in the Task List. After a task is finished, double-click on it to open the
+output folder.
