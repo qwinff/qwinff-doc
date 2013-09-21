@@ -45,6 +45,10 @@ generate_index() {
 	echo "</ul>" >> index.html
 }
 
+init_gh_pages_branch() {
+	git checkout --orphan gh-pages
+}
+
 UPDATED_ITEMS="\t"
 
 # build pages
@@ -56,7 +60,7 @@ for item in $ITEMS; do
 done
 
 # commit pages to gh-pages branch
-git checkout gh-pages
+git checkout gh-pages || init_gh_pages_branch
 if [ $? -ne 0 ]; then
 	echo "failed to switch to gh-pages"
 	exit 1
