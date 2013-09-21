@@ -4,6 +4,7 @@ ITEMS="""
 html
 singlehtml
 latexpdf
+epub
 """
 
 publish_html() {
@@ -18,6 +19,12 @@ publish_latexpdf() {
 	mkdir -p latexpdf
 	cp -r _build/latex/QWinFF.pdf latexpdf/qwinff.pdf
 	generate_redirect_page qwinff.pdf > latexpdf/index.html
+}
+
+publish_epub() {
+	mkdir -p epub
+	cp -r _build/epub/QWinFF.epub epub/qwinff.epub
+	generate_redirect_page qwinff.epub > epub/index.html
 }
 
 # usage: generate_redirect_page <target>
