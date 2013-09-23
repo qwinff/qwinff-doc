@@ -8,6 +8,8 @@ latexpdf
 epub
 """
 
+DATE=`date '+%Y-%m-%d %H:%M:%S'`
+
 publish_html() {
 	cp -r _build/html html
 }
@@ -47,6 +49,7 @@ generate_index() {
 		echo "<li><a href=\"$item/index.html\">$item</a></li>"
 	done
 	echo "</ul>"
+	echo "<small>Last updated: $DATE</small>"
 	echo "</body></html>"
 }
 
@@ -85,7 +88,6 @@ for item in $ITEMS; do
 	fi
 done
 
-DATE=`date '+%Y-%m-%d %H:%M:%S'`
 LOG="Update on $DATE.\n\nupdated items:\n$UPDATED_ITEMS"
 LOG=`echo -e "$LOG"`
 
