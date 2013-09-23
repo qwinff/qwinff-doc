@@ -39,12 +39,15 @@ generate_redirect_page() {
 }
 
 generate_index() {
-	echo "<html><head><title>QWinFF Documentation</title></head><body>" > index.html
-	echo "<ul>" >> index.html
+	echo "<html><head><title>QWinFF User Documentation</title></head><body>"
+	echo "<h3>QWinFF User Documentation</h3>"
+	echo "<p>The following formats are available:</p>"
+	echo "<ul>"
 	for item in $ITEMS; do
-		echo "<li><a href=\"$item/index.html\">$item</a></li>" >> index.html
+		echo "<li><a href=\"$item/index.html\">$item</a></li>"
 	done
-	echo "</ul></body></html>" >> index.html
+	echo "</ul>"
+	echo "</body></html>"
 }
 
 init_gh_pages_branch() {
@@ -86,7 +89,7 @@ DATE=`date '+%Y-%m-%d %H:%M:%S'`
 LOG="Update on $DATE.\n\nupdated items:\n$UPDATED_ITEMS"
 LOG=`echo -e "$LOG"`
 
-generate_index && git add index.html
+generate_index > index.html && git add index.html
 touch .nojekyll
 git add .nojekyll
 git commit -m "$LOG"
