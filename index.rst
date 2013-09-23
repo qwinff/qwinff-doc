@@ -7,7 +7,7 @@ QWinFF Documentation
    :numbered:
 
    intro
-   quickstart
+   using
    files
    presets
    credits
