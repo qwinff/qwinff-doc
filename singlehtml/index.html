@@ -78,10 +78,10 @@ conversion tasks. At the bottom-right corner, there is a <strong>Start</strong> 
 bottom of the window is the <strong>Status Bar</strong>.</p>
 <p>The first thing to do is add some files to convert. You can do it by either
 clicking on the <strong>Add</strong> button on the Toolbar or drag-and-drop files into the
-Task List. After adding all files you want to convert, an <strong>Add Task</strong> dialog
+Task List. After adding all files you want to convert, <strong>Add Tasks Dialog</strong>
 will appear. You can select the output container format (<strong>Convert To</strong>) and
-the output configuration (<strong>Preset</strong>). Then, select the desired output folder and
-press <strong>Finish</strong>.</p>
+the output configuration (<strong>Preset</strong>). Then, select the desired output folder
+and press <strong>Finish</strong>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">You can select multiple files in the <strong>Open File</strong> dialog and add
@@ -129,6 +129,45 @@ list. Available columns and their meaning are described as follows:</p>
 <dt>Video Codec</dt>
 <dd>video codec name of the input file</dd>
 </dl>
+</div>
+<div class="section" id="add-tasks-dialog">
+<h3>Add Tasks Dialog<a class="headerlink" href="#add-tasks-dialog" title="Permalink to this headline">¶</a></h3>
+<p>The first section of the Add Tasks dialog is a list of files to be added. You
+can click on the <strong>Add</strong> button to add more files or click on the <strong>Remove</strong>
+button to remove files. When you are finished, click <strong>Next</strong> to enter the next
+section.</p>
+<p>The second section contains settings related to the output file.</p>
+<dl class="docutils">
+<dt>Convert to</dt>
+<dd>This option contains a drop-down list with all possible output extensions.
+This is the <em>container format</em> of the output file.</dd>
+<dt>Preset</dt>
+<dd>For each extension, there are one or more presets that defines the <em>codec</em>
+and parameters used to convert the file.</dd>
+<dt>Output Path</dt>
+<dd>Select the output folder of the tasks. This setting only applies to the
+current tasks. You can select different output folder when you add other
+tasks later.</dd>
+</dl>
+<div class="section" id="output-path-settings">
+<h4>Output Path Settings<a class="headerlink" href="#output-path-settings" title="Permalink to this headline">¶</a></h4>
+<div class="versionadded">
+<p><span>New in version 0.1.9.</span></p>
+</div>
+<p>There are 3 choices of how the output folder is generated.</p>
+<p>The first choice is <strong>Select Folder</strong>, which means you can assign a fixed
+output folder. If you select this one, the tasks will be output to the folder
+you choose.</p>
+<p>The second choice is <strong>Create new folder in source folder</strong>. If you select this
+option, a new folder will be created in the parent folder of each input file.
+Each output file will be output to the new folder for its input file.</p>
+<p>The third choice is <strong>Output to source folder</strong>. This option is similar to the
+second one, except it doesn&#8217;t create a new folder. Each output file is placed
+in the same directory as its input file.</p>
+<p>QWinFF automatically renames a output file if a file with the same filename
+already exists in the output folder. You don&#8217;t have to worry about overwriting
+existing files.</p>
+</div>
 </div>
 </div>
 <span id="document-files"></span><div class="section" id="files">
