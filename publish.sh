@@ -55,6 +55,7 @@ UPDATED_ITEMS="\t"
 
 # build pages
 git checkout master || exit 1
+make clean
 for item in $ITEMS; do
 	echo building $item
 	make $item > /dev/null
