@@ -5,7 +5,7 @@ Using QWinFF
 QuickStart
 ==========
 
-When you start QWinFF, you will see is the **Main Window**. At the top of the Main
+When you start QWinFF, you will see the **Main Window**. At the top of the Main
 Window is the **Toolbar**, which contains most common operations you will need.
 Below the Toolbar is the `Task List`_. The Task List is used to display all
 conversion tasks. At the bottom-right corner, there is a **Start** button. At the
