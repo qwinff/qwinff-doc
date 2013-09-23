@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>QWinFF 0.1.9 documentation</title>
+    <title>QWinFF 0.2.0 documentation</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1.9',
+        VERSION:     '0.2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -29,7 +29,7 @@
     <div class="related">
       <h3>Navigation</h3>
       <ul>
-        <li><a href="index.html#document-index">QWinFF 0.1.9 documentation</a> &raquo;</li> 
+        <li><a href="index.html#document-index">QWinFF 0.2.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -67,30 +67,69 @@ United States and other countries.</td></tr>
 </tbody>
 </table>
 </div>
-<span id="document-quickstart"></span><div class="section" id="quick-start">
-<h2>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
-<p>When you open QWinFF, you will see is the <em>Main Window</em>. At the top of the Main
-Window is the <em>Toolbar</em>, which contains most common operations you will need.
-Below the Toolbar is the <em>Task List</em>. The Task List is used to display all
-conversion tasks. At the bottom-right corner, there is a <em>Start</em> button. At the
-bottom of the window is the <em>Status Bar</em>.</p>
+<span id="document-using"></span><div class="section" id="using-qwinff">
+<h2>Using QWinFF<a class="headerlink" href="#using-qwinff" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="quickstart">
+<h3>QuickStart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h3>
+<p>When you start QWinFF, you will see is the <strong>Main Window</strong>. At the top of the Main
+Window is the <strong>Toolbar</strong>, which contains most common operations you will need.
+Below the Toolbar is the <a class="reference internal" href="#task-list">Task List</a>. The Task List is used to display all
+conversion tasks. At the bottom-right corner, there is a <strong>Start</strong> button. At the
+bottom of the window is the <strong>Status Bar</strong>.</p>
 <p>The first thing to do is add some files to convert. You can do it by either
-clicking on the <em>Add</em> button on the Toolbar or drag-and-drop files into the
-Task List. After adding all files you want to convert, an <em>Add Task</em> dialog
-will appear. You can select the output container format (<em>Convert To</em>) and
-the output configuration (<em>Preset</em>). Then, select the desired output folder and
-press <em>Finish</em>.</p>
+clicking on the <strong>Add</strong> button on the Toolbar or drag-and-drop files into the
+Task List. After adding all files you want to convert, an <strong>Add Task</strong> dialog
+will appear. You can select the output container format (<strong>Convert To</strong>) and
+the output configuration (<strong>Preset</strong>). Then, select the desired output folder and
+press <strong>Finish</strong>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You can select multiple files in the <em>Open File</em> dialog and add them
-all at once.</p>
+<p class="last">You can select multiple files in the <strong>Open File</strong> dialog and add
+them all at once.</p>
 </div>
 <p>When you have added some tasks, click the Start button and the conversion will
 start. Conversion progress of each task will be shown in the progress bar entry
-in the Task List. If a conversion fails, you can view the error message by moving
+in the Task List. After a task has finished, double-click on it to open the
+output folder. If a conversion fails, you can view the error message by moving
 the mouse pointer over the progress bar or right-click on the task and select
-<em>Show Error Message</em>. After a task is finished, double-click on it to open the
-output folder.</p>
+<strong>Show Error Message</strong>.</p>
+</div>
+<div class="section" id="task-list">
+<h3>Task List<a class="headerlink" href="#task-list" title="Permalink to this headline">¶</a></h3>
+<p>The task list shows all conversion tasks. Each task has some attributes like
+<em>Source</em>, <em>Destination</em>, <em>Duration</em> and <em>Progress</em> shown in different columns.
+You can reorder the columns by dragging the header items. Also it is possible
+to select which columns to display by right-clicking on the header of the task
+list. Available columns and their meaning are described as follows:</p>
+<dl class="docutils">
+<dt>Source</dt>
+<dd>name of the input file</dd>
+<dt>Destination</dt>
+<dd>name of the output file</dd>
+<dt>Duration</dt>
+<dd>audio/video duration of the input file</dd>
+<dt>Progress</dt>
+<dd>a progressbar showing the conversion progress</dd>
+<dt>File Size</dt>
+<dd>size of the input file</dd>
+<dt>Sample Rate</dt>
+<dd>audio sample rate (Hz) of the input file</dd>
+<dt>Audio Bitrate</dt>
+<dd>audio bitrate (kb/s) of the input file</dd>
+<dt>Channels</dt>
+<dd>the number of audio channels in the input file</dd>
+<dt>Audio Codec</dt>
+<dd>audio codec name of the input file</dd>
+<dt>Dimensions</dt>
+<dd>video width and height of the input file</dd>
+<dt>Video Bitrate</dt>
+<dd>video bitrate (kb/s) of the input file</dd>
+<dt>Framerate</dt>
+<dd>video frame rate (fps) of the input file</dd>
+<dt>Video Codec</dt>
+<dd>video codec name of the input file</dd>
+</dl>
+</div>
 </div>
 <span id="document-files"></span><div class="section" id="files">
 <span id="id1"></span><h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
@@ -229,7 +268,7 @@ version 2, or any later version.</p>
 <h3><a href="index.html#document-index">Table Of Contents</a></h3>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-intro">1. Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html#document-quickstart">2. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-using">2. Using QWinFF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-files">3. Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-presets">4. Presets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-credits">5. Credit and License</a></li>
@@ -242,7 +281,7 @@ version 2, or any later version.</p>
     <div class="related">
       <h3>Navigation</h3>
       <ul>
-        <li><a href="index.html#document-index">QWinFF 0.1.9 documentation</a> &raquo;</li> 
+        <li><a href="index.html#document-index">QWinFF 0.2.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
