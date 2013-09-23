@@ -28,4 +28,9 @@ FFmpeg is a separate project, not connected to QWinFF. FFmpeg is licensed under
 the LGPL version 2.1, and some optional parts of it are covered by the GPL.
 *FFmpeg* is a trademark of Fabrice Bellard, originator of the FFmpeg project. 
 
+SoX [#sox]_, the Swiss Army knife of audio manipulation, is used by QWinFF to
+process audio under some conditions. SoX is licensed under the GPL; either
+version 2, or any later version.
+
 .. [#winff] http://winff.org
+.. [#sox] http://sox.sourceforge.net
